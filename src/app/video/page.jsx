@@ -2,7 +2,6 @@
 import React, { useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 export default function Videos() {
   const videoRef = useRef(null);
   const [isZoomed, setIsZoomed] = useState(false);
@@ -118,8 +117,8 @@ export default function Videos() {
             objectFit: "unset",
           }}
         >
-          Sorry, your browser doesn&apos; t support embedded videos, but don&apos; t worry,
-          you can
+          Sorry, your browser doesn&apos; t support embedded videos, but
+          don&apos; t worry, you can
           <a href="https://archive.org/details/BigBuckBunny_124">download it</a>
           and watch it with your favorite video player!
         </video>
