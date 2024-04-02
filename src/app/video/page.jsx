@@ -16,7 +16,7 @@ export default function Videos() {
       id: 1,
       src: "https://videos.pexels.com/video-files/11993213/11993213-hd_1080_1080_30fps.mp4",
       poster:
-        "https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217",
+        "https://images.pexels.com/videos/11993213/3d-abstract-animated-animation-11993213.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     },
     {
       id: 2,
@@ -34,22 +34,22 @@ export default function Videos() {
       id: 4,
       src: "https://cdn.shopify.com/videos/c/vp/1b22e715e049431cbea41c3f8c0955f3/1b22e715e049431cbea41c3f8c0955f3.HD-1080p-7.2Mbps-17064694.mp4",
       poster:
-        "https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217",
+        "//primordials.shop/cdn/shop/files/preview_images/1b22e715e049431cbea41c3f8c0955f3.thumbnail.0000000000_400x.jpg?v=1691449051",
     },
     // Add more video objects as needed
   ];
   const videos = [
     {
       id: 5,
-      src: "https://videos.pexels.com/video-files/8374212/8374212-hd_1080_1920_25fps.mp4",
+      src: "https://videos.pexels.com/video-files/3633003/3633003-hd_1906_1080_30fps.mp4",
       poster:
-        "https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217",
+        "https://images.pexels.com/videos/3633003/free-video-3633003.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     },
     {
       id: 6,
       src: "https://videos.pexels.com/video-files/3819342/3819342-hd_1920_1080_25fps.mp4",
       poster:
-        "https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217",
+        "https://images.pexels.com/videos/3819342/london-3819342.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     },
     {
       id: 7,
