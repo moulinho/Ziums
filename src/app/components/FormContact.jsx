@@ -22,7 +22,7 @@ function FormContact() {
       <div className="container mt-5">
         <form onSubmit={onSubmit}>
           <div className="row">
-            <h2>Commande d'article</h2>
+            <h2>Commande d&apos;article</h2>
             <div className="col-6">
             <div className="mb-3">
                 <label className="form-label" htmlFor="name">
