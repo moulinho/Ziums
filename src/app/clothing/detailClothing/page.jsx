@@ -8,7 +8,7 @@ import Clothing1 from "../../../../public/pexels-godisable-jacob-914664-removebg
 import NexImg from "../../../../public/next.svg";
 import FormContact from "@/app/components/FormContact";
 
-function detailVetement() {
+function DetailVetement() {
   const product = {
     name: "Example Product",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -162,4 +162,4 @@ function detailVetement() {
   );
 }
 
-export default detailVetement;
+export default DetailVetement;

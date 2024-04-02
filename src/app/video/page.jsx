@@ -1,12 +1,9 @@
 "use client";
 import React, { useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import video1 from "./Videos/pexels-imustbedead-18437141.mp4";
 
-// import Video from "next-video";
-// import getStarted from "/videos/get-started.mp4";
 
-export default function videos() {
+export default function Videos() {
   const videoRef = useRef(null);
   const [isZoomed, setIsZoomed] = useState(false);
 
@@ -121,7 +118,7 @@ export default function videos() {
             objectFit: "unset",
           }}
         >
-          Sorry, your browser doesn't support embedded videos, but don't worry,
+          Sorry, your browser doesn&apos; t support embedded videos, but don&apos; t worry,
           you can
           <a href="https://archive.org/details/BigBuckBunny_124">download it</a>
           and watch it with your favorite video player!
