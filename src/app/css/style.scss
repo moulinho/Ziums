@@ -4,7 +4,6 @@
 }
 
 .header-link:hover {
-  text-decoration: underline;
   color: #e5dbc2;
 }
 
@@ -139,7 +138,7 @@
 }
 
 html {
-height: 100vh;
+  height: 100vh;
 }
 
 /*** Color Variables ***/
@@ -208,6 +207,7 @@ nav {
 
       .header-link {
         font-size: 0;
+        text-decoration: none;
       }
     }
 
@@ -331,6 +331,7 @@ nav {
 .detail-info {
   h1 {
     font-size: 3rem;
+    font-weight: bold ;
   }
   .size-options {
     display: flex;
@@ -348,30 +349,70 @@ nav {
       font-size: large;
     }
 
-    input[type="radio"] {
+    .inputRed {
       display: grid;
       place-content: center;
       appearance: none;
-      background-color: #fff;
+      background-color: #344954;
       margin-right: 5px;
       font: inherit;
       color: currentColor;
       width: 2em;
       height: 2em;
-      border: 0.15em solid currentColor;
+      // border: 0.15em solid #000;
       border-radius: 50%;
     }
 
-    input[type="radio"]::before {
+   
+
+
+    .inputBlue {
+      display: grid;
+      place-content: center;
+      appearance: none;
+      background-color: #AA5C50;
+      margin-right: 5px;
+      font: inherit;
+      color: currentColor;
+      width: 2em;
+      height: 2em;
+      // border: 0.15em solid #000;
+      border-radius: 50%;
+    }
+
+  
+
+
+
+
+    .inputGreen {
+      display: grid;
+      place-content: center;
+      appearance: none;
+      background-color: #49A8A8;
+      margin-right: 5px;
+      font: inherit;
+      color: currentColor;
+      width: 2em;
+      height: 2em;
+      // border: 0.15em solid #000;
+      border-radius: 50%;
+    }
+
+    
+
+
+     input[type="radio"]::before {
       content: "";
-      width: 1.65em;
-      height: 1.65em;
+      width: 2em;
+      height: 2em;
       border-radius: 50%;
       transform: scale(0);
       transition: 120ms transform ease-in-out;
-      box-shadow: inset 1em 1em #000;
+      box-shadow: inset 1em 1em transparent;
       /* Windows High Contrast Mode */
-      background-color: #000;
+      border: 0.15em solid #000;
+      background-color: transparent;
     }
     input[type="radio"]:checked::before {
       transform: scale(1);
@@ -537,7 +578,7 @@ nav {
   // display: inline-block;
   // margin-left: 0.255em;
   // vertical-align: 0.255em;
-  content: none;
+  content: none !important;
   // border-top: 0.3em solid;
   // border-right: 0.3em solid transparent;
   // border-bottom: 0;
@@ -591,23 +632,23 @@ footer {
     color: #000;
   }
 
-  .footer-link:after {
-    content: "";
-    position: absolute;
-    width: 50%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    right: 25%;
-    background-color: #000;
-    transform-origin: center center;
-    transition: transform 0.25s ease-out;
-  }
+  // .footer-link:after {
+  //   content: "";
+  //   position: absolute;
+  //   width: 50%;
+  //   transform: scaleX(0);
+  //   height: 2px;
+  //   bottom: 0;
+  //   right: 25%;
+  //   background-color: #000;
+  //   transform-origin: center center;
+  //   transition: transform 0.25s ease-out;
+  // }
 
-  .footer-link:hover:after {
-    transform: scaleX(1);
-    transform-origin: center center;
-  }
+  // .footer-link:hover:after {
+  //   transform: scaleX(1);
+  //   transform-origin: center center;
+  // }
 }
 .form-control {
   border-radius: 25px !important;
@@ -628,6 +669,7 @@ footer {
   .header-link {
     font-size: 7px;
     font-weight: 800;
+    text-decoration: none;
   }
   .menu-btn {
     height: 0;
@@ -654,6 +696,7 @@ footer {
       h1 {
         margin: 10px 0;
         font-size: 1.5rem;
+        font-weight: bold;
       }
     }
     .size-options {
@@ -687,5 +730,8 @@ footer {
   }
   footer {
     display: grid;
+    .footer-link {
+      text-decoration: none;
+    }
   }
 }

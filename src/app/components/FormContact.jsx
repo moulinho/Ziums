@@ -38,12 +38,12 @@ function FormContact() {
               </div>
               <div className="mb-3">
                 <label className="form-label" htmlFor="name">
-                Votre adresse email
+                Votre numéro de téléphone
                 </label>
                 <input
                   className="form-control"
-                  placeholder="Votre adresse email"
-                  type="text"
+                  placeholder="Votre numéro de téléphone"
+                  type="tel"
                   id="tel"
                   required
                 />
@@ -54,7 +54,7 @@ function FormContact() {
                 </label>
                 <input
                   className="form-control"
-                  placeholder="Votre adresse email"
+                  placeholder="Votre email"
                   type="email"
                   id="email"
                   required

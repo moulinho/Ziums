@@ -9,7 +9,6 @@ import Card from "./Card";
 export default function Header() {
   let path = usePathname();
   const navigation = useRouter();
-  console.log("Header", path);
   if (typeof window !== "undefined" && window) {
     let Nav = window.document.querySelector("nav");
     let MenuBtn = document.querySelector(".menu-btn");

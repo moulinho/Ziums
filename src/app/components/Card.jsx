@@ -11,7 +11,10 @@ import Clothing6 from "../../../public/pexels-timothy-paule-ii-2002717-removebg-
 import validation from "../../../public/validation.json";
 
 function Card() {
-  const [valide, setValidate] =useState(true);
+  const [valide, setValidate] = useState(true);
+
+  const [article, setArticle] = useState([]);
+
   const handleSubmit = () => {
     setValidate(!valide);
   };
@@ -55,7 +58,7 @@ function Card() {
                 <div className="text-md">Taille : L</div>
                 <div className="text-md">Quantité : 1</div>
               </div>
-              <FaTimes className="col-2" />
+              <FaTimes className="col-2" size="1.5rem" />
             </div>
             <Dropdown.Divider />
             <div className="row">
@@ -69,14 +72,13 @@ function Card() {
               <div className="col-7">
                 <div className="">Blouse kaki avec sac de voyage jaune</div>
                 <div className="text-md">
-                  {" "}
                   <strong> 345€</strong>{" "}
                 </div>
                 <div className="text-md">Couleur : kaki (unique)</div>
                 <div className="text-md">Taille : L</div>
                 <div className="text-md">Quantité : 1</div>
               </div>
-              <FaTimes className="col-2" />
+              <FaTimes className="col-2" size="1.5rem" />
             </div>
             <Dropdown.Divider />
             <div className="row justify-content-between ">
@@ -105,7 +107,7 @@ function Card() {
           </>
         ) : (
           <>
-            <div className="p-4" style={{textAlign:'center'}}>
+            <div className="p-4" style={{ textAlign: "center" }}>
               <h4>
                 <strong className="text-xl">Commande validée</strong>
               </h4>

@@ -8,43 +8,70 @@ import Clothing4 from "../../../public/pexels-cottonbro-studio-9154696-removebg-
 import Clothing5 from "../../../public/pexels-cottonbro-studio-10679171-removebg-preview@2x.png";
 import Clothing6 from "../../../public/pexels-timothy-paule-ii-2002717-removebg-preview@2x.png";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-export default function detail() {
+export default function Detail() {
+  const router = useRouter();
   return (
     <div className="vetement">
       <div className="img">
-        <Link href="/clothing/detailClothing">
+        <Link href="/clothing/detailClothing?id=1">
           <Image
             src={Clothing1}
             alt="Groupe de masques"
             style={{ objectFit: "contain" }}
           />
         </Link>
-        <Image
-          src={Clothing2}
-          alt="Groupe de masques"
-          style={{ objectFit: "contain" }}
-        />
-        <Image
-          src={Clothing3}
-          alt="Groupe de masques"
-          style={{ objectFit: "contain" }}
-        />
-        <Image
-          src={Clothing4}
-          alt="Groupe de masques"
-          style={{ objectFit: "contain" }}
-        />
-        <Image
-          src={Clothing5}
-          alt="Groupe de masques"
-          style={{ objectFit: "contain" }}
-        />
-        <Image
-          src={Clothing6}
-          alt="Groupe de masques"
-          style={{ objectFit: "contain" }}
-        />
+
+        <Link
+         href="/clothing/detailClothing?id=2"
+        >
+          <Image
+            src={Clothing2}
+            alt="Groupe de masques"
+            style={{ objectFit: "contain" }}
+          />
+        </Link>
+
+        <Link
+         href="/clothing/detailClothing?id=3"
+        >
+          <Image
+            src={Clothing3}
+            alt="Groupe de masques"
+            style={{ objectFit: "contain" }}
+          />
+        </Link>
+
+        <Link
+         href="/clothing/detailClothing?id=4"
+        >
+          <Image
+            src={Clothing4}
+            alt="Groupe de masques"
+            style={{ objectFit: "contain" }}
+          />
+        </Link>
+
+        <Link
+         href="/clothing/detailClothing?id=5"
+        >
+          <Image
+            src={Clothing5}
+            alt="Groupe de masques"
+            style={{ objectFit: "contain" }}
+          />
+        </Link>
+
+        <Link
+         href="/clothing/detailClothing?id=6"
+        >
+          <Image
+            src={Clothing6}
+            alt="Groupe de masques"
+            style={{ objectFit: "contain" }}
+          />
+        </Link>
       </div>
     </div>
   );
