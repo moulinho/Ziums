@@ -1,5 +1,5 @@
 "use client";
-import React, { Suspense, useEffect, useState } from "react";
+import React, {  useState } from "react";
 import Image from "next/image";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
@@ -107,7 +107,7 @@ function DetailVetement() {
   };
 
   return (
-    <Suspense>
+    
     <div className="detail">
       {(() => {
         switch (id) {
@@ -820,7 +820,7 @@ function DetailVetement() {
         <FormContact id={id} handleClose={handleClose} />
       </Modal>
     </div>
-    </Suspense>
+   
   );
 }
 

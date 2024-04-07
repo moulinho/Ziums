@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^2.2.3",
     "bootstrap": "^5.3.3",
     "json-server": "^1.0.0-alpha.23",
     "lottie-react": "^2.4.0",

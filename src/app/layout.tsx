@@ -5,7 +5,7 @@ import "./css/style.scss";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import localFont from "next/font/local";
-import StoreProvider from "./StoreProvider";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 const myFont = localFont({ src: "./fonts/JosefinSans-Regular.ttf" });
@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <StoreProvider>
+    <Suspense>
       <html lang="fr">
         <body className={myFont.className}>
           <Header />
@@ -30,6 +30,6 @@ export default function RootLayout({
           <Footer />
         </body>
       </html>
-    </StoreProvider>
+    </Suspense>
   );
 }

@@ -17,9 +17,7 @@ export default function Header() {
     if (typeof window === undefined) return;
 
     setDataStorage(localStorage.getItem("article"));
-
   }, []);
-  console.log("dataStorage", dataStorage);
 
   if (typeof window !== "undefined" && window) {
     let Nav = window.document.querySelector("nav");
