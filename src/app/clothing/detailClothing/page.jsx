@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import Image from "next/image";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
@@ -13,7 +13,7 @@ import Clothing6 from "../../../../public/pexels-timothy-paule-ii-2002717-remove
 import NexImg from "../../../../public/next.svg";
 import FormContact from "@/app/components/FormContact";
 import { useSearchParams } from "next/navigation";
-import { Suspense } from 'react'
+// import { Suspense } from 'react'
 function DetailVetement() {
   const params = useSearchParams();
   const id = params.get("id");
