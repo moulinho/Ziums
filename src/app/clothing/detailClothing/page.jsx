@@ -12,7 +12,7 @@ import Clothing5 from "../../../../public/pexels-cottonbro-studio-10679171-remov
 import Clothing6 from "../../../../public/pexels-timothy-paule-ii-2002717-removebg-preview@2x.png";
 import NexImg from "../../../../public/next.svg";
 import FormContact from "@/app/components/FormContact";
-import { useParams, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 function DetailVetement() {
   const params = useSearchParams();
@@ -123,7 +123,7 @@ function DetailVetement() {
                 <div className="detail-info">
                   <div className="product">
                     <h1 className="">
-                    Denim Hem Shirt and Pants Set <br /> 145€
+                      Denim Hem Shirt and Pants Set <br /> 145€
                     </h1>
                     <div className="size-options">
                       <div>
@@ -238,7 +238,9 @@ function DetailVetement() {
                 </div>
                 <div className="detail-info">
                   <div className="product">
-                    <h1 className="">Long dress <br /> 345€</h1>
+                    <h1 className="">
+                      Long dress <br /> 345€
+                    </h1>
                     <div className="size-options">
                       <div>
                         <p>Colors</p>
@@ -352,7 +354,9 @@ function DetailVetement() {
                 </div>
                 <div className="detail-info">
                   <div className="product">
-                    <h1 className="">Denim Hem Shirt and Pants Set <br /> 345€</h1>
+                    <h1 className="">
+                      Denim Hem Shirt and Pants Set <br /> 345€
+                    </h1>
                     <div className="size-options">
                       <div>
                         <p>Colors</p>
@@ -467,7 +471,7 @@ function DetailVetement() {
                 <div className="detail-info">
                   <div className="product">
                     <h1 className="">
-                    Men’s shirt and pants set with blue t-shirt <br /> 295€
+                      Men’s shirt and pants set with blue t-shirt <br /> 295€
                     </h1>
                     <div className="size-options">
                       <div>
@@ -583,7 +587,7 @@ function DetailVetement() {
                 <div className="detail-info">
                   <div className="product">
                     <h1 className="">
-                    Men’s shirt and pants set <br /> 345€
+                      Men’s shirt and pants set <br /> 345€
                     </h1>
                     <div className="size-options">
                       <div>
@@ -698,7 +702,10 @@ function DetailVetement() {
                 </div>
                 <div className="detail-info">
                   <div className="product">
-                    <h1 className="">Long jacket and shopping bag <br />345€</h1>
+                    <h1 className="">
+                      Long jacket and shopping bag <br />
+                      345€
+                    </h1>
                     <div className="size-options">
                       <div>
                         <p>Colors</p>
