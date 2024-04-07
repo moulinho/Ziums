@@ -13,7 +13,7 @@ import Clothing6 from "../../../../public/pexels-timothy-paule-ii-2002717-remove
 import NexImg from "../../../../public/next.svg";
 import FormContact from "@/app/components/FormContact";
 import { useSearchParams } from "next/navigation";
-
+import { Suspense } from 'react'
 function DetailVetement() {
   const params = useSearchParams();
   const id = params.get("id");
@@ -107,6 +107,7 @@ function DetailVetement() {
   };
 
   return (
+    <Suspense>
     <div className="detail">
       {(() => {
         switch (id) {
@@ -819,6 +820,7 @@ function DetailVetement() {
         <FormContact id={id} handleClose={handleClose} />
       </Modal>
     </div>
+    </Suspense>
   );
 }
 
