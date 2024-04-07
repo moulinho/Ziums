@@ -1,5 +1,5 @@
 "use client";
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
@@ -86,28 +86,15 @@ function DetailVetement() {
       size: selectedSize,
     });
 
-    console.log("listeItem", listeItem);
+    listeItem = [...storedCart, ...listeItem];
+    window.localStorage.setItem("article", JSON.stringify(listeItem));
 
-    const existe = storedCart.find((item, index) => {
-      console.log("existe", item);
-      // item.id === listeItem[0].id;
-    });
-
-    if (existe) {
-      console.log("exist", existe);
-
-      // window.localStorage.setItem("article", JSON.stringify(listeItem));
-    } else {
-      listeItem = [...storedCart, ...listeItem];
-      window.localStorage.setItem("article", JSON.stringify(listeItem));
-    }
     // console.log("data", data);
 
     if (first) setOpen(false);
   };
 
   return (
-    
     <div className="detail">
       {(() => {
         switch (id) {
@@ -820,7 +807,6 @@ function DetailVetement() {
         <FormContact id={id} handleClose={handleClose} />
       </Modal>
     </div>
-   
   );
 }
 
