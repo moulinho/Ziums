@@ -7,7 +7,7 @@ export default function Footer() {
       <Link className="footer-link" href="/contact">
         CONTACT
       </Link>
-      <Link className="footer-link" href="#">
+      <Link className="footer-link" href="/terms">
         TERMS
       </Link>
       <Link className="footer-link" href="#">

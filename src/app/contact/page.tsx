@@ -16,7 +16,7 @@ function Contact() {
     
         />
         <div className="address">
-          <strong>Nos contacts</strong>
+          <strong>Our contacts</strong>
           <div className="">
             <strong>infos@zium.com</strong>{" "}
           </div>
@@ -26,17 +26,17 @@ function Contact() {
       </div>
       <div className="col-md-5 col-sm-12 col-xs-12 p-4">
         <h1 className="mb-3" style={{ color: "#fff" }}>
-          Écrivez-nous
+        Write us
         </h1>
         <div className="row">
           <div className="col-md-6  col-sm-12 col-xs-12 ">
             <div className="mb-3">
               <label className="form-label" htmlFor="name">
-                <strong> Votre nom</strong>
+                <strong> Your name</strong>
               </label>
               <input
                 className="form-control"
-                placeholder="Votre nom"
+                placeholder="Your name"
                 type="text"
                 id="name"
                 required
@@ -47,11 +47,11 @@ function Contact() {
           <div className="col-md-6  col-sm-12 col-xs-12">
             <div className="mb-3">
               <label className="form-label" htmlFor="name">
-                <strong> Votre adresse email </strong>
+                <strong> Your email </strong>
               </label>
               <input
                 className="form-control"
-                placeholder="Votre adresse email"
+                placeholder="Your email"
                 type="text"
                 id="tel"
                 required
@@ -61,13 +61,13 @@ function Contact() {
           <div className="col-12">
             <div className="mb-3">
               <label className="form-label" htmlFor="message">
-                <strong>Votre message </strong>
+                <strong>Message</strong>
               </label>
               <textarea
                 className="form-control"
                 rows={8}
                 id="message"
-                placeholder="Votre message …"
+                placeholder="Message…"
                 required
               />
             </div>
@@ -75,7 +75,7 @@ function Contact() {
           <div className="detail-info " >
           <div className="detail-info-command">
             <button type="submit" className="button-d">
-              <p style={{ fontSize: "0.7rem" }}>Envoyer le message</p>
+              <p style={{ fontSize: "0.7rem" }}>Send message</p>
               <Image
                 src={NexImg}
                 alt="Groupe de masques"

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -9,6 +9,18 @@ import Card from "./Card";
 export default function Header() {
   let path = usePathname();
   const navigation = useRouter();
+  const [dataStorage, setDataStorage] = useState([]);
+
+  useEffect(() => {
+    // set the initial theme value when component mounts
+    // but only when the window object is defined
+    if (typeof window === undefined) return;
+
+    setDataStorage(localStorage.getItem("article"));
+
+  }, []);
+  console.log("dataStorage", dataStorage);
+
   if (typeof window !== "undefined" && window) {
     let Nav = window.document.querySelector("nav");
     let MenuBtn = document.querySelector(".menu-btn");

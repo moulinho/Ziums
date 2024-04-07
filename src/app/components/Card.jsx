@@ -1,19 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Lottie from "lottie-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import { FaTimes } from "react-icons/fa";
 import Image from "next/image";
 import shopping from "../../../public/shopping-cart.svg";
+import shoppingFull from "../../../public/shopping-cart-full.svg";
 import NexImg from "../../../public/next1.svg";
 import Clothing1 from "../../../public/pexels-godisable-jacob-914664-removebg-preview@2x.png";
+import Clothing2 from "../../../public/pexels-engin-akyurt-3687550-removebg-preview@2x.png";
+import Clothing3 from "../../../public/pexels-godisable-jacob-914668-removebg-preview@2x.png";
+import Clothing4 from "../../../public/pexels-cottonbro-studio-9154696-removebg-preview@2x.png";
+import Clothing5 from "../../../public/pexels-cottonbro-studio-10679171-removebg-preview@2x.png";
 import Clothing6 from "../../../public/pexels-timothy-paule-ii-2002717-removebg-preview@2x.png";
 import validation from "../../../public/validation.json";
 
 function Card() {
+  // let dataArticle =
+  //   typeof window !== "undefined"
+  //     ?
+  //     : null;
+  // console.log("article", dataArticle);
   const [valide, setValidate] = useState(true);
-
-  const [article, setArticle] = useState([]);
 
   const handleSubmit = () => {
     setValidate(!valide);
@@ -22,12 +30,21 @@ function Card() {
   return (
     <Dropdown>
       <Dropdown.Toggle variant="" id="dropdown-basic">
-        <Image
-          src={shopping}
-          alt="Groupe de masques"
-          width={40}
-          // style={{ objectFit: "contain" }}
-        />
+        {/* {dataArticle ? (
+          <Image
+            src={shoppingFull}
+            alt="Groupe de masques"
+            width={40}
+            // style={{ objectFit: "contain" }}
+          />
+        ) : ( */}
+          <Image
+            src={shopping}
+            alt="Groupe de masques"
+            width={30}
+            // style={{ objectFit: "contain" }}
+          />
+        {/* )} */}
       </Dropdown.Toggle>
 
       <Dropdown.Menu
@@ -38,7 +55,8 @@ function Card() {
       >
         {valide ? (
           <>
-            <div className="row">
+        
+            <div className="row" >
               <Image
                 src={Clothing1}
                 alt="Groupe de masques"
@@ -54,12 +72,16 @@ function Card() {
                 <div className="text-md">
                   <strong> 145€</strong>
                 </div>
-                <div className="text-md">Couleur : Bleu</div>
+                <div className="text-md">Couleur : kaki (unique)</div>
                 <div className="text-md">Taille : L</div>
                 <div className="text-md">Quantité : 1</div>
+                {/* <div className="text-md">Couleur : {dataArticle.color}</div>
+                <div className="text-md">Taille : {dataArticle.size}</div>
+                <div className="text-md">Quantité : {dataArticle.quantity}</div> */}
               </div>
               <FaTimes className="col-2" size="1.5rem" />
             </div>
+            
             <Dropdown.Divider />
             <div className="row">
               <Image
