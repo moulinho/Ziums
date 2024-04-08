@@ -21,15 +21,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <Suspense>
-      <html lang="fr">
-        <body className={myFont.className}>
+    <html lang="fr">
+      <body className={myFont.className}>
+        <Suspense>
           <Header />
 
           {children}
           <Footer />
-        </body>
-      </html>
-    </Suspense>
+        </Suspense>
+      </body>
+    </html>
   );
 }

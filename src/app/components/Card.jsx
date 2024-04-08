@@ -16,12 +16,15 @@ import Clothing6 from "../../../public/pexels-timothy-paule-ii-2002717-removebg-
 import validation from "../../../public/validation.json";
 
 function Card() {
-  // let dataArticle =
-  //   typeof window !== "undefined"
-  //     ?
-  //     : null;
-  // console.log("article", dataArticle);
+  const [fakCard, setFakCard] = useState(["item1", "item2"]);
+
   const [valide, setValidate] = useState(true);
+  const [article, SetArticle] = useState(null);
+
+  const deleteItem = (idx) => {
+    console.log("delete",idx);
+    SetArticle(idx);
+  };
 
   const handleSubmit = () => {
     setValidate(!valide);
@@ -38,12 +41,12 @@ function Card() {
             // style={{ objectFit: "contain" }}
           />
         ) : ( */}
-          <Image
-            src={shopping}
-            alt="Groupe de masques"
-            width={30}
-            // style={{ objectFit: "contain" }}
-          />
+        <Image
+          src={shopping}
+          alt="Groupe de masques"
+          width={30}
+          // style={{ objectFit: "contain" }}
+        />
         {/* )} */}
       </Dropdown.Toggle>
 
@@ -55,54 +58,71 @@ function Card() {
       >
         {valide ? (
           <>
-        
-            <div className="row" >
-              <Image
-                src={Clothing1}
-                alt="Groupe de masques"
-                height={80}
-                style={{ objectFit: "contain" }}
-                className="col-3"
-                // style={{ objectFit: "contain" }}
-              />
-              <div className="col-7">
-                <div className="">
-                  Ensemble chemise et pantalon à ourlet en jeans
+            {fakCard.map((item, index) => {
+              return (
+                <div key={index} className="row">
+                  {item === "item1" ? (
+                    <div className={article === index ? "d-none" : "row"}>
+                      <Image
+                        src={Clothing1}
+                        alt="Groupe de masques"
+                        height={80}
+                        style={{ objectFit: "contain" }}
+                        className="col-3"
+                        // style={{ objectFit: "contain" }}
+                      />
+                      <div className="col-7">
+                        <div className="">
+                          Ensemble chemise et pantalon à ourlet en jeans
+                        </div>
+                        <div className="text-md">
+                          <strong> 145€</strong>
+                        </div>
+                        <div className="text-md">Couleur : kaki (unique)</div>
+                        <div className="text-md">Taille : L</div>
+                        <div className="text-md">Quantité : 1</div>
+                      </div>
+                      <FaTimes
+                        className="col-2"
+                        size="1.5rem"
+                        onClick={() => deleteItem(index)}
+                      />
+                    </div>
+                  ) : item === "item2" ? (
+                    <div className={article === index ? "d-none" : "row"}>
+                      <Image
+                        src={Clothing6}
+                        alt="Groupe de masques"
+                        height={80}
+                        style={{ objectFit: "contain" }}
+                        className="col-3"
+                      />
+                      <div className="col-7">
+                        <div className="">
+                          Blouse kaki avec sac de voyage jaune
+                        </div>
+                        <div className="text-md">
+                          <strong> 345€</strong>{" "}
+                        </div>
+                        <div className="text-md">Couleur : kaki (unique)</div>
+                        <div className="text-md">Taille : L</div>
+                        <div className="text-md">Quantité : 1</div>
+                      </div>
+                      <FaTimes
+                        className="col-2"
+                        size="1.5rem"
+                        onClick={() => deleteItem(index)}
+                      />
+                    </div>
+                  ) : (
+                    <div className="text-theme-11 text-3xl">Empty</div>
+                  )}
+                  <Dropdown.Divider />
                 </div>
-                <div className="text-md">
-                  <strong> 145€</strong>
-                </div>
-                <div className="text-md">Couleur : kaki (unique)</div>
-                <div className="text-md">Taille : L</div>
-                <div className="text-md">Quantité : 1</div>
-                {/* <div className="text-md">Couleur : {dataArticle.color}</div>
-                <div className="text-md">Taille : {dataArticle.size}</div>
-                <div className="text-md">Quantité : {dataArticle.quantity}</div> */}
-              </div>
-              <FaTimes className="col-2" size="1.5rem" />
-            </div>
-            
-            <Dropdown.Divider />
-            <div className="row">
-              <Image
-                src={Clothing6}
-                alt="Groupe de masques"
-                height={80}
-                style={{ objectFit: "contain" }}
-                className="col-3"
-              />
-              <div className="col-7">
-                <div className="">Blouse kaki avec sac de voyage jaune</div>
-                <div className="text-md">
-                  <strong> 345€</strong>{" "}
-                </div>
-                <div className="text-md">Couleur : kaki (unique)</div>
-                <div className="text-md">Taille : L</div>
-                <div className="text-md">Quantité : 1</div>
-              </div>
-              <FaTimes className="col-2" size="1.5rem" />
-            </div>
-            <Dropdown.Divider />
+              );
+            })}
+
+            {/* <Dropdown.Divider /> */}
             <div className="row justify-content-between ">
               <div className="col-3">
                 <div className="text-md">Livraison</div>
