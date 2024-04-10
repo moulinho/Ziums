@@ -7,10 +7,7 @@ export default function page() {
         fontWeight: "500",
         color: "black",
         position: "absolute",
-        top: "20%",
-        bottom: "20%",
-        left: "15%",
-        right: "15%",
+       padding:"170px 30px",
         fontSize:'20px'
       }}
     >

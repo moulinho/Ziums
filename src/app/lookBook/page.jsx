@@ -1,4 +1,6 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import Image from "next/image";
 import lookBook1 from "../../../public/pexels-marta-branco-1395306@2x.png";
 import lookBook2 from "../../../public/pexels-godisable-jacob-1191536@2x.png";
@@ -16,28 +18,28 @@ export default function LookBook() {
         <Image
           src={lookBook1}
           alt="Groupe de masques"
-          style={{ objectFit: "contain", width: "37vw", height: "55vh" }}
+          style={{ objectFit: "contain", width: "37vw", height: "50vh" }}
         />
-        <div className="detail-look">
+        <div className="detail-look row justify-content-center">
           <Image
             src={lookBook2}
             alt="Groupe de masques"
-            style={{ objectFit: "contain", width: "15vw", height: "25vh" }}
+            style={{ objectFit: "contain", width: "19vw", height: "100%" }}
           />
           <Image
             src={lookBook3}
             alt="Groupe de masques"
-            style={{ objectFit: "contain", width: "15vw", height: "25vh" }}
+            style={{ objectFit: "contain", width: "19vw", height: "100%" }}
           />
           <Image
             src={lookBook4}
             alt="Groupe de masques"
-            style={{ objectFit: "contain", width: "15vw", height: "25vh" }}
+            style={{ objectFit: "contain", width: "19vw", height: "100%" }}
           />
           <Image
             src={lookBook5}
             alt="Groupe de masques"
-            style={{ objectFit: "contain", width: "15vw", height: "25vh" }}
+            style={{ objectFit: "contain", width: "19vw", height: "100%" }}
           />
         </div>
 
@@ -47,53 +49,51 @@ export default function LookBook() {
           style={{ objectFit: "contain" }}
         /> */}
       </div>
-      <div style={{ display: "flex", justifyContent: "center" , margin:"50px 0"}}>
+      <div className="row justify-content-center">
         <Image
           src={lookBook6}
           alt="Groupe de masques"
-          style={{
-            width: "20vw",
-            height: "40vh",
-          }}
+          className=""
+          style={{ objectFit: "contain", width: "30%", height: "100%" }}
         />
         <Image
           src={lookBook7}
           alt="Groupe de masques"
+          className=""
           style={{
-            width: "20vw",
-            height: "40vh",
-           
+            objectFit: "contain",
+            width: "30%",
+            height: "100%",
           }}
         />
         <Image
           src={lookBook8}
           alt="Groupe de masques"
-          style={{ width: "20vw", height: "40vh" }}
+          style={{ objectFit: "contain", width: "30%", height: "100%" }}
         />
       </div>
 
       <div className="img-look">
-       
-        <div className="detail-look">
+        <div className="detail-look row justify-content-center">
           <Image
             src={lookBook2}
             alt="Groupe de masques"
-            style={{ objectFit: "contain", width: "15vw", height: "25vh" }}
+           style={{ objectFit: "contain", width: "19vw", height: "100%" }}
           />
           <Image
             src={lookBook3}
             alt="Groupe de masques"
-            style={{ objectFit: "contain", width: "15vw", height: "25vh" }}
+           style={{ objectFit: "contain", width: "19vw", height: "100%" }}
           />
           <Image
             src={lookBook4}
             alt="Groupe de masques"
-            style={{ objectFit: "contain", width: "15vw", height: "25vh" }}
+           style={{ objectFit: "contain", width: "19vw", height: "100%" }}
           />
           <Image
             src={lookBook5}
             alt="Groupe de masques"
-            style={{ objectFit: "contain", width: "15vw", height: "25vh" }}
+           style={{ objectFit: "contain", width: "19vw", height: "100%" }}
           />
         </div>
 
