@@ -25,6 +25,7 @@ function FormContact({ id, handleClose }) {
     window.localStorage.setItem("UserInfo", JSON.stringify(conFom));
 
     handleClose(conFom);
+    router.refresh();
     router.push("/livraison");
     // console.log(conFom);
   };

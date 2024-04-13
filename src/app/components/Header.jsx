@@ -23,7 +23,6 @@ export default function Header() {
   if (typeof window !== "undefined" && window) {
     var audio = document.getElementById("audio_tag");
     // var audio = new Audio("")
-    audio.volume = 0.4;
     let Nav = window.document.querySelector("nav");
     let MenuBtn = document.querySelector(".menu-btn");
 
@@ -59,7 +58,7 @@ export default function Header() {
     >
       {/* shopping-cart.svg */}
       <nav id="player">
-        <audio id="audio_tag" loop>
+        <audio volume="0.4" id="audio_tag" loop>
           <source src="/ZIUM_BACKGROUND-SOUNDS.mp3" type="audio/mpeg" />
         </audio>
         <div id="menu">
