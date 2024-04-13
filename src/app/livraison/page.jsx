@@ -15,7 +15,7 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import Lottie from "lottie-react";
 
-export default function page() {
+export default function Page() {
   const [stateCommand, setStateCommand] = useState(false);
   const [open, setOpen] = useState(false);
   const [valide, setValidate] = useState(false);
