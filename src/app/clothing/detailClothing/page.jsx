@@ -793,7 +793,7 @@ function DetailVetement() {
 
                   {/* <p> Size: {selectedSize}</p> */}
                 </div>
-              </>
+              </>    
             );
           default:
             return (
