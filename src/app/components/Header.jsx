@@ -10,6 +10,7 @@ export default function Header() {
   let path = usePathname();
   const navigation = useRouter();
   const [dataStorage, setDataStorage] = useState([]);
+  const [play, setPlay] = useState(true);
 
   useEffect(() => {
     // set the initial theme value when component mounts
@@ -20,6 +21,9 @@ export default function Header() {
   }, []);
 
   if (typeof window !== "undefined" && window) {
+    var audio = document.getElementById("audio_tag");
+    // var audio = new Audio("")
+    audio.volume = 0.4;
     let Nav = window.document.querySelector("nav");
     let MenuBtn = document.querySelector(".menu-btn");
 
@@ -41,9 +45,23 @@ export default function Header() {
   }
 
   return (
-    <header>
+    <header
+      onClick={() => {
+        // setPlay(true);
+        play ? audio.play() : null;
+        console.log("play", play);
+      }}
+      // onClick={() => {
+      //   setPlay(false);
+      //   play ? audio.pause() : null;
+      //   console.log("paused", play);
+      // }}
+    >
       {/* shopping-cart.svg */}
-      <nav>
+      <nav id="player">
+        <audio id="audio_tag" loop>
+          <source src="/ZIUM_BACKGROUND-SOUNDS.mp3" type="audio/mpeg" />
+        </audio>
         <div id="menu">
           <div className="menu-btn" id="logo">
             <div className="button">
@@ -58,7 +76,7 @@ export default function Header() {
             </div>
             <div className="button">
               <Link className="header-link" href="accessoire">
-                ACCESSOIRIES
+                ACCESSORIES
               </Link>
             </div>
             <div className="button">

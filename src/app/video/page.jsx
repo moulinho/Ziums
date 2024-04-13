@@ -97,7 +97,7 @@ export default function Videos() {
 
   return (
     <div className="videos">
-      <div className="row justify-content-center">
+      <div className="main-video row justify-content-center">
         <video
           controls
           src="https://videos.pexels.com/video-files/5743177/5743177-hd_2048_1080_25fps.mp4"
@@ -111,8 +111,6 @@ export default function Videos() {
           // ref={videoRef}
           id="video"
           style={{
-            width: "30vw",
-            height: "55vh",
             borderRadius: "50%",
             objectFit: "unset",
           }}
@@ -122,7 +120,7 @@ export default function Videos() {
           <a href="https://archive.org/details/BigBuckBunny_124">download it</a>
           and watch it with your favorite video player!
         </video>
-        <div className="col-md-5 col-sm-12  col-xs-12 row justify-content-center">
+        <div className="detail-video col-md-5 col-sm-12  col-xs-12 row justify-content-center">
           {videoDetail.map((video) => (
             // <div
 
@@ -134,8 +132,7 @@ export default function Videos() {
               poster={video.poster}
               loop={hoveredVideo === video.id}
               style={{
-                width: "15vw",
-                height: "25vh",
+                // width:"100%",
                 borderRadius: "50%",
                 objectFit: "unset",
               }}
@@ -148,91 +145,10 @@ export default function Videos() {
             </video>
             // </div>
           ))}
-          {/* <video
-            onClick={handleMouseOver}
-            onMouseOut={handleMouseOut}
-            src=""
-            id="video"
-            poster=""
-            style={{
-              width: "15vw",
-              height: "25vh",
-              borderRadius: "50%",
-              objectFit: "unset",
-            }}
-          >
-            Sorry, your browser doesn't support embedded videos, but don't
-            worry, you can
-            <a href="https://archive.org/details/BigBuckBunny_124">
-              download it
-            </a>
-            and watch it with your favorite video player!
-          </video>
-          <video
-            onClick={handleMouseOver}
-            onMouseOut={handleMouseOut}
-            src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-            poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
-            style={{
-              width: "15vw",
-              height: "25vh",
-              borderRadius: "50%",
-              objectFit: "unset",
-            }}
-          >
-            Sorry, your browser doesn't support embedded videos, but don't
-            worry, you can
-            <a href="https://archive.org/details/BigBuckBunny_124">
-              download it
-            </a>
-            and watch it with your favorite video player!
-          </video>
-          <video
-            id="video"
-            src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-            poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
-            style={{
-              width: "15vw",
-              height: "25vh",
-              borderRadius: "50%",
-              objectFit: "unset",
-            }}
-          >
-            Sorry, your browser doesn't support embedded videos, but don't
-            worry, you can
-            <a href="https://archive.org/details/BigBuckBunny_124">
-              download it
-            </a>
-            and watch it with your favorite video player!
-          </video>
-
-          <video
-            id="video"
-            src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-            poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
-            style={{
-              width: "15vw",
-              height: "25vh",
-              borderRadius: "50%",
-              objectFit: "unset",
-            }}
-          >
-            Sorry, your browser doesn't support embedded videos, but don't
-            worry, you can
-            <a href="https://archive.org/details/BigBuckBunny_124">
-              download it
-            </a>
-            and watch it with your favorite video player!
-          </video> */}
         </div>
-
-        {/* <Image
-          src={lookBook6}
-          alt="Groupe de masques"
-          style={{ objectFit: "contain" }}
-        /> */}
       </div>
       <div
+        className="video-container"
         style={{
           display: "flex",
           justifyContent: "center",
@@ -241,29 +157,29 @@ export default function Videos() {
         }}
       >
         {videos.map((video) => (
-          <div
+          // <div
+          //   key={video.id}
+          //   onMouseEnter={() => handleMouseOver(video.id)}
+          //   onMouseLeave={handleMouseOut}
+          // >
+          <video
             key={video.id}
-            className="video-container"
-            onMouseEnter={() => handleMouseOver(video.id)}
-            onMouseLeave={handleMouseOut}
+            className={hoveredVideo === video.id ? "active" : ""}
+            controls={hoveredVideo === video.id}
+            autoPlay
+            poster={video.poster}
+            loop={hoveredVideo === video.id}
+            style={{
+              width: "20vw",
+              height: "40vh",
+              borderRadius: "50%",
+              objectFit: "unset",
+            }}
           >
-            <video
-              className={hoveredVideo === video.id ? "active" : ""}
-              controls={hoveredVideo === video.id}
-              autoPlay
-              poster={video.poster}
-              loop={hoveredVideo === video.id}
-              style={{
-                width: "20vw",
-                height: "40vh",
-                borderRadius: "50%",
-                objectFit: "unset",
-              }}
-            >
-              <source src={video.src} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+            <source src={video.src} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          // </div>
         ))}
       </div>
     </div>
