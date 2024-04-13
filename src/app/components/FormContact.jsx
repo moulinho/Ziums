@@ -25,8 +25,8 @@ function FormContact({ id, handleClose }) {
     window.localStorage.setItem("UserInfo", JSON.stringify(conFom));
 
     handleClose(conFom);
-    router.refresh();
-    router.push("/livraison");
+    // router.refresh();
+    // router.push("/livraison");
     // console.log(conFom);
   };
 
@@ -88,7 +88,7 @@ function FormContact({ id, handleClose }) {
                 />
               </div>
               <div className="detail-info-command">
-                <button type="submit" className=" panier">
+                <button type="submit" className=" panier" onClick={() => router.push('/livraison')}>
                   <p>Add to caddy</p>
                   <Image
                     src={NexImg}
