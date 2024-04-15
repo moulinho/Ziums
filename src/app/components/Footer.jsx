@@ -11,11 +11,11 @@ export default function Footer() {
       <Link className="footer-link" href="/terms">
         TERMS
       </Link>
-      <span className="footer-link row" href="#">
-        <FaFacebook className="col-1" size="1.5rem" role="button" />
-        <FaTiktok className="col-1" size="1.5rem" role="button"/>
-        <FaInstagram className="col-1" size="1.5rem" role="button"/>
-      </span>
+      <div className="footer-link row" href="#">
+        <FaFacebook className="col-3" size="1.2rem" role="button" />
+        <FaTiktok className="col-3" size="1.2rem" role="button"/>
+        <FaInstagram className="col-3" size="1.2rem" role="button"/>
+      </div>
     </footer>
   );
 }
