@@ -58,7 +58,13 @@ export default function Header() {
     >
       {/* shopping-cart.svg */}
       <nav id="player">
-        <audio volume="0.4" id="audio_tag" loop>
+        <audio
+          controls
+          volume="0.4"
+          id="audio_tag"
+          loop
+          style={{ position: "absolute", width: "27%", height:"25%", top:"-100px", left:"10px" }}
+        >
           <source src="/ZIUM_BACKGROUND-SOUNDS.mp3" type="audio/mpeg" />
         </audio>
         <div id="menu">
