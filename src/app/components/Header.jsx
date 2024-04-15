@@ -63,7 +63,7 @@ export default function Header() {
           volume="0.4"
           id="audio_tag"
           loop
-          style={{ position: "absolute", width: "27%", height:"25%", top:"-100px", left:"10px" }}
+          style={{ position: "absolute", width: "120px", height:"25%", top:"-100px", left:"10px" }}
         >
           <source src="/ZIUM_BACKGROUND-SOUNDS.mp3" type="audio/mpeg" />
         </audio>
