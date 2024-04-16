@@ -172,7 +172,7 @@ export default function Page() {
                   />
                 </div>
                 <div className="detail-info-command">
-                  <button type="submit" className="panier">
+                  <button type="submit" className="panier" onClick={() => setStateCommand(true)}>
                     <p>Delivery</p>
                     <Image
                       src={NexImg}

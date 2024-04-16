@@ -148,13 +148,8 @@ export default function Videos() {
         </div>
       </div>
       <div
-        className="video-container"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: "10px",
-          margin: "50px 0",
-        }}
+        className="video-container row"
+       
       >
         {videos.map((video) => (
           // <div
@@ -170,8 +165,7 @@ export default function Videos() {
             poster={video.poster}
             loop={hoveredVideo === video.id}
             style={{
-              width: "20vw",
-              height: "40vh",
+              
               borderRadius: "50%",
               objectFit: "unset",
             }}

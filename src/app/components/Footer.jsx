@@ -12,9 +12,9 @@ export default function Footer() {
         TERMS
       </Link>
       <div className="footer-link row" href="#">
-        <FaFacebook className="col-3" size="1.2rem" role="button" />
-        <FaTiktok className="col-3" size="1.2rem" role="button"/>
-        <FaInstagram className="col-3" size="1.2rem" role="button"/>
+        <FaFacebook className="col-2" size="1.8rem" role="button" />
+        <FaTiktok className="col-2" size="1.8rem" role="button"/>
+        <FaInstagram className="col-2" size="1.8rem" role="button"/>
       </div>
     </footer>
   );

@@ -122,9 +122,9 @@
   transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), 0.2s ease opacity,
     0.2s cubic-bezier(0.08, 0.82, 0.17, 1) transform;
   z-index: -1;
-  &:hover {
-    transform: scale(1.1);
-  }
+  // &:hover {
+  //   transform: scale(1.1);
+  // }
   // &:first-of-type {
   //   background: url("https://assets.codepen.io/3537853/cam.svg") no-repeat 50%/50%
   //     #000;
@@ -370,6 +370,7 @@ nav {
   display: grid;
   grid-template-areas: "a a a";
 }
+
 .img {
   width: 100%;
 }
@@ -718,8 +719,9 @@ nav {
 
 .contact {
   // margin: 12% 0;
-  padding: 12rem 0;
+  padding: 13rem 0;
   background: #998784;
+  width: auto;
   height: 100vh;
   img {
     width: 80%;
@@ -727,6 +729,41 @@ nav {
   }
   .address {
     padding: 0 20%;
+  }
+  .forms-contact {
+    padding: 10px;
+  }
+  .detail-info .button-d {
+    p {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.terms {
+  font-weight: 500;
+  color: #000;
+  padding: 15%;
+  font-size: 20px;
+  h1 {
+    text-align: center;
+    font-weight: 800;
+    color: black;
+    position: sticky;
+  }
+  h2 {
+    font-weight: "800";
+    color: black;
+  }
+}
+.video-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 50px 0;
+  video {
+    width: 20vw;
+    height: 40vh;
   }
 }
 footer {
@@ -760,12 +797,12 @@ footer {
 }
 
 /*** Responsive Menu For Smaller Device ***/
-@media (320px <= width <=768px) {
+@media only screen and (320px <= width <=768px) {
   nav {
     &.navShadow {
       // box-shadow: 0 4px 30px -5px rgba(#000, 0.2);
       height: 20%;
-      background: transparent;
+      background: #998784;
 
       #word-mark {
         opacity: 0;
@@ -787,6 +824,7 @@ footer {
             transition-delay: 0.05s;
           }
           &:nth-of-type(3) {
+            padding: 0;
             top: 25%;
             right: -55%;
             transition-delay: 0.1s;
@@ -838,6 +876,7 @@ footer {
         transition-delay: 0.05s;
       }
       &:nth-of-type(3) {
+        padding: 26px;
         top: 40px;
         right: -60%;
         transition-delay: 0.1s;
@@ -863,11 +902,9 @@ footer {
         right: 11%;
         width: 60%;
       }
-      .panier:hover{
-        
+      .panier:hover {
         bottom: 12%;
         right: 25%;
-       
       }
     }
   }
@@ -881,7 +918,7 @@ footer {
   .accessoir {
     display: grid;
 
-    padding: 130px 0;
+    padding: 145px 0;
   }
   .accessoir {
     grid-template-areas: "a a";
@@ -993,29 +1030,88 @@ footer {
   }
   .video-container {
     display: grid !important;
-    justify-content: space-around !important;
     grid-template-areas: "a a" !important;
-    & video {
+    gap: 5;
+    video {
       width: 90%;
       height: 135px;
     }
   }
-  .row > .contact {
-    padding: 30% 0;
-    height: 100vh;
+  .contact {
+    padding: 11rem 0;
+    // width: 100%;
     .logo-info {
-      text-align: center;
-      margin: 30px 0;
-    }
-    img {
-      width: 50%;
-      height: 70%;
+      // text-align: center;
+      // margin: 30px 0;
+      img {
+        display: none !important;
+      }
     }
     .address {
       padding: 0 15%;
+      .text-contact {
+        text-align: center;
+        font-size: 2rem;
+      }
     }
-    .detail-info-command {
+    // .detail-info-command {
+    //   text-align: center;
+    // }
+    h1 {
       text-align: center;
+      font-size: 3.5rem;
+      margin: 0;
+    }
+    label,
+    .detail-info-command {
+      padding: 0 5%;
+      font-size: 1.5rem;
+    }
+
+    .forms-contact {
+      padding: 0 10%;
+    }
+    textarea {
+      width: 100%;
+      height: 12vh;
+    }
+    .detail-info .button-d {
+      width: 8.4em;
+      p {
+        font-size: 1rem;
+        font-weight: bolder;
+      }
+      &::after {
+        left: 0%;
+      }
+      &:hover {
+        width: 12em;
+        &::after {
+          left: 7%;
+        }
+      }
+    }
+  }
+  .terms {
+    font-weight: 500;
+    color: #000;
+
+    padding: 60% 10%;
+    font-size: 20px;
+    h1 {
+      text-align: center;
+      font-weight: 800;
+      color: black;
+      background-color: #998784;
+      position: fixed;
+
+      top: 20%;
+      right: 2%;
+      width: 100%;
+    }
+    h2 {
+      font-weight: 800;
+      color: black;
     }
   }
 
@@ -1045,8 +1141,9 @@ footer {
   }
   footer {
     display: grid;
-    
-    .footer-link {font-size: .7rem;
+
+    .footer-link {
+      font-size: 0.7rem;
       text-decoration: none;
     }
   }
