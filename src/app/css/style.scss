@@ -890,22 +890,65 @@ footer {
   }
 
   .livraison {
-    padding: 25% 10%;
+    padding: 40% 10%;
+    height: 100%;
+    .fs-6 {
+      font-size: 0.6rem !important;
+    }
+    form {
+      .pt-4 {
+        padding-top: 1.1rem;
+      }
+    }
     img {
       width: 20% !important;
       height: 8rem !important;
     }
     .detail-info-command {
       .panier {
-        position: absolute;
-        bottom: 12%;
-        right: 11%;
+        // position: absolute;
+        // bottom: -15%;
+        // right: 11%;
+        margin: 70px 0 0 -84px;
         width: 60%;
+        img {
+          top: -2.55em;
+        }
+        &::after {
+          width: calc(100% - -24px);
+        }
       }
       .panier:hover {
-        bottom: 12%;
+        bottom: 13%;
         right: 25%;
       }
+    }
+    .delivery {
+      .my-4 {
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.2rem !important;
+      }
+      h3 {
+        margin: 0;
+      }
+      .panier {
+        bottom: 35px;
+        &:hover {
+          bottom: 35px;
+        }
+        img {
+          top: -2.55em;
+        }
+        &::after {
+          width: calc(100% - -24px);
+        }
+        P {
+          width: 6.1rem;
+        }
+      }
+      // /p  // .delivery {
+
+      //   // }
     }
   }
 

@@ -6,7 +6,7 @@ import Clothing4 from "../../../public/pexels-cottonbro-studio-9154696-removebg-
 import Clothing5 from "../../../public/pexels-cottonbro-studio-10679171-removebg-preview@2x.png";
 import Clothing6 from "../../../public/pexels-timothy-paule-ii-2002717-removebg-preview@2x.png";
 import NexImg from "../../../public/next.svg";
-import validation from "../../../public/validation.json"
+import validation from "../../../public/validation.json";
 import "../css/style.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -14,6 +14,7 @@ import Image from "next/image";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import Lottie from "lottie-react";
+import { IoIosArrowRoundBack } from "react-icons/io";
 
 export default function Page() {
   const [stateCommand, setStateCommand] = useState(false);
@@ -28,7 +29,7 @@ export default function Page() {
   return (
     <div className="livraison">
       <div className="row">
-        <div className="col-sm-6 col-xs-12">
+        <div className="col-sm-6 col-xs-12 fw-bold ">
           <h2>
             <strong>Delivery</strong>
           </h2>
@@ -77,7 +78,7 @@ export default function Page() {
               style={{ objectFit: "contain" }}
             />
           </div>
-          <div className="row justify-content-between">
+          <div className="row justify-content-between fs-3">
             <div className="col">Total :</div>
             <div className="col">
               1820 €{" "}
@@ -88,35 +89,58 @@ export default function Page() {
           </div>
         </div>
         <div className="col-sm-6  col-xs-12">
-          <p>Means of payment</p>
-          <ul className="nav nav-pills gap-4 ">
-            <li className="nav-item " onClick={() => setStateCommand(false)}>
-              <a
-                className={
-                  !stateCommand ? "nav-link fs-6 active" : "nav-link fs-6 "
-                }
-                aria-current="page"
-                href="#"
+          {!stateCommand ? (
+            <>
+              <p>Means of payment</p>
+              <ul className="nav nav-pills gap-4 ">
+                <li
+                  className="nav-item "
+                  onClick={() => setStateCommand(false)}
+                >
+                  <a
+                    className={
+                      !stateCommand ? "nav-link fs-6 active" : "nav-link fs-6 "
+                    }
+                    aria-current="page"
+                    href="#"
+                  >
+                    Pay by card
+                  </a>
+                </li>
+                <li className="nav-item ">
+                  <a className="nav-link fs-6 " href="#">
+                    Pay via PayPal
+                  </a>
+                </li>
+                <li className="nav-item" onClick={() => setStateCommand(true)}>
+                  <a
+                    className={
+                      stateCommand ? "nav-link fs-6 active" : "nav-link fs-6 "
+                    }
+                    href="#"
+                  >
+                    Pay on delivery
+                  </a>
+                </li>
+              </ul>
+            </>
+          ) : (
+            <div className="delivery">
+              <div
+                role="button"
+                className="row align-items-center my-4 fw-bold"
+                onClick={() => setStateCommand(false)}
               >
-                Pay by card
-              </a>
-            </li>
-            <li className="nav-item ">
-              <a className="nav-link fs-6 " href="#">
-                Pay via PayPal
-              </a>
-            </li>
-            <li className="nav-item" onClick={() => setStateCommand(true)}>
-              <a
-                className={
-                  stateCommand ? "nav-link fs-6 active" : "nav-link fs-6 "
-                }
-                href="#"
-              >
-                Pay on delivery
-              </a>
-            </li>
-          </ul>
+                <div className="col-1">
+                  <IoIosArrowRoundBack size={30} color="black" />
+                </div>
+
+                <div className="col">Means of payment</div>
+              </div>
+              <h3>Delivery address</h3>
+            </div>
+          )}
+
           {!stateCommand ? (
             <form onSubmit={onSubmit} className="row pt-4">
               <div className="col-6 col-sm-6 col-xs-12">
@@ -172,7 +196,11 @@ export default function Page() {
                   />
                 </div>
                 <div className="detail-info-command">
-                  <button type="submit" className="panier" onClick={() => setStateCommand(true)}>
+                  <button
+                    type="submit"
+                    className="panier"
+                    onClick={() => setStateCommand(true)}
+                  >
                     <p>Delivery</p>
                     <Image
                       src={NexImg}
@@ -190,9 +218,9 @@ export default function Page() {
             </form>
           ) : (
             <>
-              <form onSubmit={onSubmit} className="row pt-4">
-                <div className="col-6 col-sm-6 col-xs-12">
-                  <div className="mb-3">
+              <form onSubmit={onSubmit} className="row pt-4 delivery">
+                <div className="col-6 col-sm-6 col-xs-12 " >
+                  <div className="mb-3 col-xs-12">
                     <label className="form-label" htmlFor="name">
                       Your name
                     </label>
@@ -268,28 +296,30 @@ export default function Page() {
         </div>
       </div>
       <Modal open={open} onClose={onCloseModal} center>
-       
-          <div className="container mt-5">
-            <h2>Order validated</h2>
-            <p> You will be contacted soon for delivery of your item</p>
-            <div style={{ width: "12rem", margin: "0 3rem" }}>
-                <Lottie animationData={validation} loop={false} />
-              </div>
-            <div className="detail-info-command text-center">
-              <button type="submit" className=" panier" onClick={()=>setOpen(false)}>
-                <p className="">
-                  <strong>OK</strong>
-                </p>
-                <Image
-                  src={NexImg}
-                  alt="Groupe de masques"
-                  width={400}
-                  // style={{ objectFit: "contain" }}
-                />
-              </button>
-            </div>
+        <div className="container mt-5">
+          <h2>Order validated</h2>
+          <p> You will be contacted soon for delivery of your item</p>
+          <div style={{ width: "12rem", margin: "0 3rem" }}>
+            <Lottie animationData={validation} loop={false} />
           </div>
-      
+          <div className="detail-info-command text-center">
+            <button
+              type="submit"
+              className=" panier"
+              onClick={() => setOpen(false)}
+            >
+              <p className="">
+                <strong>OK</strong>
+              </p>
+              <Image
+                src={NexImg}
+                alt="Groupe de masques"
+                width={400}
+                // style={{ objectFit: "contain" }}
+              />
+            </button>
+          </div>
+        </div>
       </Modal>
     </div>
   );
