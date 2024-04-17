@@ -797,7 +797,7 @@ footer {
 }
 
 /*** Responsive Menu For Smaller Device ***/
-@media only screen and (320px <= width <=768px) {
+@media only screen and (300px <= width <=768px) {
   nav {
     &.navShadow {
       // box-shadow: 0 4px 30px -5px rgba(#000, 0.2);
@@ -859,31 +859,32 @@ footer {
     text-decoration: none;
   }
   .menu-btn {
-    width: 27%;
+    width: 29%;
     height: 15%;
     top: 0;
     .button {
       opacity: 1;
-      width: 50%;
-      height: 50%;
+      width: 75%;
+height: 65%;
+
       &:first-of-type {
-        top: 40px;
-        left: -60%;
+        top: 30px;
+        left: -80%;
       }
       &:nth-of-type(2) {
-        top: -60%;
-        left: 30px;
+        top: -70%;
+        left: 15px;
         transition-delay: 0.05s;
       }
       &:nth-of-type(3) {
         padding: 26px;
-        top: 40px;
-        right: -60%;
+        top: 30px;
+        right: -80%;
         transition-delay: 0.1s;
       }
       &:last-of-type {
-        bottom: -60%;
-        left: 30px;
+        bottom: -70%;
+        left: 15px;
         transition-delay: 0.05s;
       }
     }
