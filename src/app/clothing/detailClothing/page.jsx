@@ -76,7 +76,7 @@ function DetailVetement() {
   // console.log("newQuantity", quantity);
 
   const handleClose = (first) => {
-    let storedCart = JSON.parse(localStorage.getItem("article"));
+    let storedCart = JSON.parse(localStorage.getItem("article"))|| "[]";
     let listeItem = [];
 
     listeItem.push({

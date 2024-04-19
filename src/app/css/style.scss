@@ -716,7 +716,9 @@ nav {
     border: none !important;
   }
 }
-
+a{
+  color: #000;
+}
 .contact {
   // margin: 12% 0;
   padding: 13rem 0;
@@ -1016,10 +1018,11 @@ height: 65%;
 
       .button-d {
         position: absolute;
-        width: 47vw;
-        height: 5%;
-        bottom: 16%;
-        left: 23%;
+        width: 40%;
+        // height: 5%;
+        // bottom: 16%;
+        // left: 23%;
+        margin: 70% 0px 0px -40%;
         p {
           right: 65%;
           font-weight: 800;
@@ -1034,11 +1037,12 @@ height: 65%;
         }
         &::after {
           bottom: 0px;
-          left: 10%;
+          left: 8%;
         }
         &:hover::after {
           bottom: 8px;
           left: 12%;
+          
         }
       }
     }
