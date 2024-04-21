@@ -146,7 +146,6 @@
 .rotateNav {
   animation: spin 1.2s linear;
   animation-fill-mode: forwards;
-
 }
 .zoom-container {
   transition: transform 1s;
@@ -865,20 +864,21 @@ footer {
   }
   .menu-btn {
     width: 110px;
-    height: 130px;
+    height: 110px;
+    padding: 10px;
     top: 0;
     .button {
       opacity: 1;
-      width: 75%;
-      height: 65%;
+      width: 70px;
+      height: 70px;
 
       &:first-of-type {
         top: 30px;
         left: -80%;
       }
       &:nth-of-type(2) {
-        top: -70%;
-        left: 15%;
+        top: -85px;
+        left: 20px;
         transition-delay: 0.05s;
       }
       &:nth-of-type(3) {
@@ -888,8 +888,8 @@ footer {
         transition-delay: 0.1s;
       }
       &:last-of-type {
-        bottom: -70%;
-        left: 15%;
+        bottom: -85px;
+        left: 20px;
         transition-delay: 0.05s;
       }
     }
@@ -939,11 +939,10 @@ footer {
       }
       .panier {
         bottom: 35px;
-        
+
         &:hover {
           bottom: 35px;
           width: 13.2em;
-
         }
         img {
           top: -2.55em;
