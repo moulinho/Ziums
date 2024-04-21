@@ -46,9 +46,9 @@ export default function Header() {
   return (
     <header
       onClick={() => {
-        // setPlay(true);
         play ? audio.play() : null;
-        console.log("play", play);
+        setPlay(false);
+        // console.log("play", play);
       }}
       // onClick={() => {
       //   setPlay(false);
@@ -58,16 +58,39 @@ export default function Header() {
     >
       {/* shopping-cart.svg */}
       <nav id="player">
-        <audio
-          controls
+        {/* <audio
           volume="0.4"
+          controls
           id="audio_tag"
           loop
-          style={{ position: "absolute", width: "120px", height:"25%", top:"-100px", left:"10px" }}
+          style={{
+            position: "absolute",
+            width: "120px",
+            height: "25%",
+            top: "-100px",
+            left: "10px",
+          }}
         >
           <source src="/ZIUM_BACKGROUND-SOUNDS.mp3" type="audio/mpeg" />
-        </audio>
+        </audio> */}
         <div id="menu">
+          
+          <audio
+            controls
+            volume="0.4"
+            id="audio_tag"
+            loop
+            className="logo"
+            style={{
+              position: "absolute",
+              width: "100px",
+              height: "25%",
+              top: "10px",
+              left: "10px",
+            }}
+          >
+            <source src="/ZIUM_BACKGROUND-SOUNDS.mp3" type="audio/mpeg" />
+          </audio>
           <div className="menu-btn" id="logo">
             <div className="button">
               <Link className="header-link" href="/video">

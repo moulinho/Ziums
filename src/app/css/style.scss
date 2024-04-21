@@ -19,58 +19,59 @@
   padding: 30px;
   background: #000;
   border-radius: 100%;
-  width: 10%;
-  .menu-btn {
-    position: relative;
-    top: 40px;
-    padding: 30px;
-    background: #000;
-    border-radius: 100%;
-    width: 10%;
-    height: 20%;
-    cursor: pointer;
-    animation: spini 0.5s ease-in-out;
-    background: url("../../../public/Logo-Zium.svg") no-repeat 50%/50% #000;
-    opacity: 0.9;
-    p {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    .button {
-      opacity: 1;
-      width: 100%;
-      height: 100%;
-      pointer-events: auto;
-      color: #e5dbc2;
-      background: #000;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      &:first-of-type {
-        top: 0;
-        left: -102%;
-      }
-      &:nth-of-type(2) {
-        top: -102%;
-        transition-delay: 0.05s;
-      }
-      &:nth-of-type(3) {
-        top: 0;
-        right: -102%;
-        transition-delay: 0.1s;
-      }
-      &:last-of-type {
-        bottom: -102%;
-        transition-delay: 0.05s;
-      }
-    }
-  }
+  width: 180px;
+  // .menu-btn {
+  //   position: relative;
+  //   top: 40px;
+  //   padding: 30px;
+  //   background: #000;
+  //   border-radius: 100%;
+  //   width: 25%;
+  //   height: 20%;
+  //   cursor: pointer;
+  //   animation: spini 0.5s ease-in-out;
+  //   background: url("../../../public/Logo-Zium.svg") no-repeat 50%/50% #000;
+  //   opacity: 0.9;
+  //   p {
+  //     top: 50%;
+  //     left: 50%;
+  //     transform: translate(-50%, -50%);
+  //   }
+  //   .button {
+  //     opacity: 1;
+  //     width: 100%;
+  //     height: 100%;
+  //     pointer-events: auto;
+  //     color: #e5dbc2;
+  //     background: #000;
+  //     text-align: center;
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: center;
+  //     &:first-of-type {
+  //       top: 0;
+  //       left: -102%;
+  //     }
+  //     &:nth-of-type(2) {
+  //       top: -102%;
+  //       transition-delay: 0.05s;
+  //     }
+  //     &:nth-of-type(3) {
+  //       top: 0;
+  //       right: -102%;
+  //       transition-delay: 0.1s;
+  //     }
+  //     &:last-of-type {
+  //       bottom: -102%;
+  //       transition-delay: 0.05s;
+  //     }
+  //   }
+  // }
 
   height: 20%;
   cursor: pointer;
-  animation: spini 0.5s ease-in-out;
+  animation: spini 1.2s linear;
+  animation-fill-mode: forwards;
   background: url("../../../public/Logo-Zium.svg") no-repeat 50%/50% #000;
   opacity: 0.9;
   p {
@@ -143,10 +144,12 @@
   // }
 }
 .rotateNav {
-  animation: spin 0.5s ease-in-out;
+  animation: spin 1.2s linear;
+  animation-fill-mode: forwards;
+
 }
 .zoom-container {
-  transition: transform 0.3s;
+  transition: transform 1s;
   cursor: pointer;
 }
 
@@ -159,7 +162,7 @@
     transform: rotate(0deg) scale(8);
   }
   100% {
-    transform: rotate(-360deg) scale(1);
+    transform: rotate(-720deg) scale(1);
   }
 }
 @keyframes spini {
@@ -167,7 +170,7 @@
     transform: rotate(0deg) scale(8);
   }
   100% {
-    transform: rotate(-360deg) scale(1);
+    transform: rotate(720deg) scale(1);
   }
 }
 
@@ -716,7 +719,7 @@ nav {
     border: none !important;
   }
 }
-a{
+a {
   color: #000;
 }
 .contact {
@@ -799,7 +802,7 @@ footer {
 }
 
 /*** Responsive Menu For Smaller Device ***/
-@media only screen and (300px <= width <=768px) {
+@media only screen and (250px <= width <=768px) {
   nav {
     &.navShadow {
       // box-shadow: 0 4px 30px -5px rgba(#000, 0.2);
@@ -861,13 +864,13 @@ footer {
     text-decoration: none;
   }
   .menu-btn {
-    width: 29%;
-    height: 15%;
+    width: 110px;
+    height: 130px;
     top: 0;
     .button {
       opacity: 1;
       width: 75%;
-height: 65%;
+      height: 65%;
 
       &:first-of-type {
         top: 30px;
@@ -875,7 +878,7 @@ height: 65%;
       }
       &:nth-of-type(2) {
         top: -70%;
-        left: 15px;
+        left: 15%;
         transition-delay: 0.05s;
       }
       &:nth-of-type(3) {
@@ -886,7 +889,7 @@ height: 65%;
       }
       &:last-of-type {
         bottom: -70%;
-        left: 15px;
+        left: 15%;
         transition-delay: 0.05s;
       }
     }
@@ -936,14 +939,17 @@ height: 65%;
       }
       .panier {
         bottom: 35px;
+        
         &:hover {
           bottom: 35px;
+          width: 13.2em;
+
         }
         img {
           top: -2.55em;
         }
         &::after {
-          width: calc(100% - -24px);
+          width: calc(100% - -50px);
         }
         P {
           width: 6.1rem;
@@ -1042,7 +1048,6 @@ height: 65%;
         &:hover::after {
           bottom: 8px;
           left: 12%;
-          
         }
       }
     }
